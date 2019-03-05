@@ -33,14 +33,8 @@ void TestRopeIdeaApp::setup()
         int lineCount = 0;
         while ( myfile.good() )
         {
-//            if(lineCount % 1000 == 0) {
-//                cout << lineCount << endl;
-//            }
-            
-                getline(myfile,line);
+            getline(myfile,line);
             if (lineCount > 6) {
-    //            cout << line << endl;
-    //             index 2,3,5,6,14,15
                 string word;
                 stringstream stream(line);
                 std::vector<string> frameList;
@@ -49,28 +43,20 @@ void TestRopeIdeaApp::setup()
                     frameList.push_back(token);
                 }
                 vector<float> newFrame;
-                if( frameList.size() > 2 && !frameList.at(2).empty() && !frameList.at(5).empty() && !frameList.at(14).empty()) {
-                    // hip 1 x
-                    newFrame.push_back(stof(frameList.at(2)));
-                    // hip 1 y
-                    newFrame.push_back(stof(frameList.at(3)));
-//                    cout << frameList.at(3) << endl;
-                    // hip 2 x
-                    newFrame.push_back(stof(frameList.at(5)));
-    //                cout << frameList.at(5) << endl;
-                    // hip 2 y
-                    newFrame.push_back(stof(frameList.at(6)));
-    //                cout << frameList.at(6) << endl;
-                    // chest x
-                    newFrame.push_back(stof(frameList.at(14)));
-    //                cout << frameList.at(14) << endl;
-                    // chest y
-                    newFrame.push_back(stof(frameList.at(15)));
-    //                cout << frameList.at(15) << endl;
-    //                break;
+                bool addIt = true;
+                // first two frames meta data, then 49 joints * xyz positions (147 data points)
+                if(frameList.size() > 2) {
+                    for(int i=2; i<149; i++){
+                        if(!frameList.at(i).empty()){
+                            newFrame.push_back(stof(frameList.at(i)));
+                        } else {
+                            addIt = false;
+                            break;
+                        }
+                    }
+                }
+                if(addIt) {
                     frames.push_back(newFrame);
-                } else {
-//                    cout << "empty" << endl;
                 }
             }
             lineCount += 1;
@@ -96,13 +82,14 @@ void TestRopeIdeaApp::draw()
 	gl::clear( Color( 0, 0, 0 ) );
     // reset the matrices
     gl::setMatricesWindow( getWindowSize() );
-    // move to the window center
-    gl::translate( getWindowCenter().x, getWindowCenter().y );
+    // move to the window x center and the 'floor' of the screen
+    gl::translate( getWindowCenter().x, getWindowHeight() );
     gl::rotate(M_PI);
+//    gl::scale(100, 100, 100);
     gl::color(1.0, 0, 0);
     auto temp  = frames.at(frameCount);
-    for(int i=0; i<6; i+=2){
-        gl::drawSolidEllipse(vec2(temp.at(i)*100, temp.at(i+1)*100), 10, 10);
+    for(int i=0; i<temp.size(); i+=3){
+        gl::drawSphere(vec3(temp.at(i)*150, temp.at(i+1)*150, temp.at(i+2)*15), 10, 10);
     }
     
     if(frameCount < frames.size()) {
