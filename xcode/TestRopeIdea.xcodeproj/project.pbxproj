@@ -16,13 +16,31 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
 		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+		1251F6ADA2AC4F1B871178C2 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = E934C1FAB83E4447AA1ED054 /* CinderApp.icns */; };
+		46AE9812222DFFA20049FECA /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 46AE9807222DFFA20049FECA /* SyphonNameboundClient.m */; };
+		46AE9813222DFFA20049FECA /* ServerDirectory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46AE980B222DFFA20049FECA /* ServerDirectory.mm */; };
+		46AE9814222DFFA20049FECA /* Server.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46AE980C222DFFA20049FECA /* Server.mm */; };
+		46AE9815222DFFA20049FECA /* Client.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46AE9810222DFFA20049FECA /* Client.mm */; };
+		46FC5F3D222E048C0069E917 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AE9806222DFFA20049FECA /* Syphon.framework */; };
+		46FC5F3E222E048C0069E917 /* Syphon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46AE9806222DFFA20049FECA /* Syphon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		78D3100297D34ACEB8A4F0DB /* TestRopeIdea_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 0252B10E4EFB44808534BBA3 /* TestRopeIdea_Prefix.pch */; };
-		1251F6ADA2AC4F1B871178C2 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = E934C1FAB83E4447AA1ED054 /* CinderApp.icns */; };
-		FBA81D915352473FA3F6E12B /* Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = 790361C5CD294C7A9B2BE6F8 /* Resources.h */; };
 		D20760039C30468FA9290282 /* TestRopeIdeaApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9484D99AFE5942F4B4489936 /* TestRopeIdeaApp.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46FC5F3F222E048C0069E917 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				46FC5F3E222E048C0069E917 /* Syphon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		006D720219952D00008149E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -34,16 +52,26 @@
 		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		00B995581B128DF400A5C623 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		00B995591B128DF400A5C623 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		0252B10E4EFB44808534BBA3 /* TestRopeIdea_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = TestRopeIdea_Prefix.pch; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		41E8EAD5B0B049B1A6B94DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46AE9806222DFFA20049FECA /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Syphon.framework; sourceTree = "<group>"; };
+		46AE9807222DFFA20049FECA /* SyphonNameboundClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyphonNameboundClient.m; sourceTree = "<group>"; };
+		46AE9808222DFFA20049FECA /* SyphonNameboundClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyphonNameboundClient.h; sourceTree = "<group>"; };
+		46AE980A222DFFA20049FECA /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		46AE980B222DFFA20049FECA /* ServerDirectory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ServerDirectory.mm; sourceTree = "<group>"; };
+		46AE980C222DFFA20049FECA /* Server.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Server.mm; sourceTree = "<group>"; };
+		46AE980D222DFFA20049FECA /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		46AE980E222DFFA20049FECA /* Syphon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Syphon.h; sourceTree = "<group>"; };
+		46AE980F222DFFA20049FECA /* ServerDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerDirectory.h; sourceTree = "<group>"; };
+		46AE9810222DFFA20049FECA /* Client.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Client.mm; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		790361C5CD294C7A9B2BE6F8 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TestRopeIdea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRopeIdea.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9484D99AFE5942F4B4489936 /* TestRopeIdeaApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../src/TestRopeIdeaApp.cpp; sourceTree = "<group>"; name = TestRopeIdeaApp.cpp; };
-		790361C5CD294C7A9B2BE6F8 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../include/Resources.h; sourceTree = "<group>"; name = Resources.h; };
-		E934C1FAB83E4447AA1ED054 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; name = CinderApp.icns; };
-		41E8EAD5B0B049B1A6B94DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; name = Info.plist; };
-		0252B10E4EFB44808534BBA3 /* TestRopeIdea_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = TestRopeIdea_Prefix.pch; sourceTree = "<group>"; name = TestRopeIdea_Prefix.pch; };
+		9484D99AFE5942F4B4489936 /* TestRopeIdeaApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = TestRopeIdeaApp.cpp; path = ../src/TestRopeIdeaApp.cpp; sourceTree = "<group>"; };
+		E934C1FAB83E4447AA1ED054 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */,
+				46FC5F3D222E048C0069E917 /* Syphon.framework in Frameworks */,
 				006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
@@ -68,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				46AE9804222DFFA20049FECA /* Syphon */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,13 +161,6 @@
 			name = TestRopeIdea;
 			sourceTree = "<group>";
 		};
-		01B97315FEAEA392516A2CEA /* Blocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Blocks;
-			sourceTree = "<group>";
-		};
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +188,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		46AE9804222DFFA20049FECA /* Syphon */ = {
+			isa = PBXGroup;
+			children = (
+				46AE9805222DFFA20049FECA /* lib */,
+				46AE9809222DFFA20049FECA /* src */,
+			);
+			name = Syphon;
+			path = ../blocks/Syphon;
+			sourceTree = "<group>";
+		};
+		46AE9805222DFFA20049FECA /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				46AE9806222DFFA20049FECA /* Syphon.framework */,
+				46AE9807222DFFA20049FECA /* SyphonNameboundClient.m */,
+				46AE9808222DFFA20049FECA /* SyphonNameboundClient.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		46AE9809222DFFA20049FECA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				46AE980A222DFFA20049FECA /* Client.h */,
+				46AE980B222DFFA20049FECA /* ServerDirectory.mm */,
+				46AE980C222DFFA20049FECA /* Server.mm */,
+				46AE980D222DFFA20049FECA /* Server.h */,
+				46AE980E222DFFA20049FECA /* Syphon.h */,
+				46AE980F222DFFA20049FECA /* ServerDirectory.h */,
+				46AE9810222DFFA20049FECA /* Client.mm */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +232,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				46FC5F3F222E048C0069E917 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +249,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TestRopeIdea" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -219,7 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AE9814222DFFA20049FECA /* Server.mm in Sources */,
+				46AE9813222DFFA20049FECA /* ServerDirectory.mm in Sources */,
+				46AE9815222DFFA20049FECA /* Client.mm in Sources */,
 				D20760039C30468FA9290282 /* TestRopeIdeaApp.cpp in Sources */,
+				46AE9812222DFFA20049FECA /* SyphonNameboundClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,20 +302,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				FRAMEWORK_SEARCH_PATHS = ../blocks/Syphon/lib;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TestRopeIdea_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = TestRopeIdea_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/macosx/$(CONFIGURATION)/libcinder.a\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = TestRopeIdea;
@@ -258,19 +332,21 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = ../blocks/Syphon/lib;
 				GCC_FAST_MATH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TestRopeIdea_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = TestRopeIdea_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/macosx/$(CONFIGURATION)/libcinder.a\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = TestRopeIdea;
@@ -284,7 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CINDER_PATH = "../../..";
+				CINDER_PATH = ../../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
 				ENABLE_TESTABILITY = YES;
@@ -302,7 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CINDER_PATH = "../../..";
+				CINDER_PATH = ../../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
